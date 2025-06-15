@@ -11,7 +11,7 @@ import numpy as np
 st.set_page_config(layout="wide", page_title="County Analytics Dashboard")
 
 # Load data
-df = pd.read_excel("C:/Users/Admin/Downloads/feature_Data.xlsx")
+df = pd.read_excel("/content/feature_Data.xlsx")
 for col in ['Expenditures', 'Revenues', 'Indebtedness']:
     df[col] = df[col].replace('[\$,]', '', regex=True).astype(float)
 df['GeoFIPS'] = df['GeoFIPS'].astype(str).str.zfill(5)
